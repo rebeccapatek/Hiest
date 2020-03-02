@@ -46,7 +46,13 @@ namespace hiest
                         int skillLevelInt = int.Parse(skillLevel);
                         combinedSkillLevel += skillLevelInt;
                     }
-                    if (combinedSkillLevel >= difficultLevelInt)
+                    Random rand = new Random();
+                    int luckValue = rand.Next(-10, 11);
+                    int diffPlusLuck = difficultLevelInt + luckValue;
+                    Console.WriteLine($"Your teams combined skill level is {combinedSkillLevel}");
+                    Console.WriteLine($"The Bank's difficulty level is {difficultLevelInt}");
+                    Console.WriteLine("Each time you try, there is some Luck that can affect the Bank's Difficulty Level that you can't see")
+                    if (combinedSkillLevel >= diffPlusLuck)
                     {
                         Console.WriteLine("You could pull off this heist!");
                     }
