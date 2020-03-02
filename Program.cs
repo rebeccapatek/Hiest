@@ -36,15 +36,30 @@ namespace hiest
                 }
                 else
                 {
+                    Console.WriteLine("What is the Difficulty Level of the bank from 1-100");
+                    string difficultLevel = Console.ReadLine();
+                    int difficultLevelInt = int.Parse(difficultLevel);
+                    int combinedSkillLevel = 0;
                     foreach (Dictionary<string, string> member in listOfTeamMembers)
                     {
-                        foreach (KeyValuePair<string, string> memberInfo in member)
-                        {
-                            Console.WriteLine($"{memberInfo.Key}: {memberInfo.Value}");
-                        }
+                        string skillLevel = member["skill level"];
+                        int skillLevelInt = int.Parse(skillLevel);
+                        combinedSkillLevel += skillLevelInt;
                     }
+                    if (combinedSkillLevel >= difficultLevelInt)
+                    {
+                        Console.WriteLine("You could pull off this heist!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not a chance. Recruit some more and try again.");
+                    }
+
+
+
                     break;
                 }
+
             }
         }
     }
