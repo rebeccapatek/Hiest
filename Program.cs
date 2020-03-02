@@ -7,13 +7,18 @@ namespace hiest
         static void Main(string[] args)
         {
             List<Dictionary<string, string>> listOfTeamMembers = new List<Dictionary<string, string>>();
+
+
+            Console.WriteLine("Plan your Hiest!");
+            Console.WriteLine("What is the Difficulty Level of the bank from 1-100");
+            string difficultLevel = Console.ReadLine();
+            int difficultLevelInt = int.Parse(difficultLevel);
+
             while (true)
             {
-
-
-
                 Dictionary<string, string> teamMember = new Dictionary<string, string>();
-                Console.WriteLine("Plan your Hiest!");
+
+
                 Console.WriteLine("Please enter your team members name");
                 string memberName = Console.ReadLine();
                 teamMember.Add("name", memberName);
@@ -39,34 +44,49 @@ namespace hiest
                     Console.WriteLine("How many trial runs on robbing the bank would you like to run?");
                     string numTrials = Console.ReadLine();
                     int numTrailsInt = int.Parse(numTrials);
+                    int totalSuccess = 0;
+                    int totalFailure = 0;
 
                     for (int i = 0; i < numTrailsInt; i++)
                     {
-                        Console.WriteLine("What is the Difficulty Level of the bank from 1-100");
-                        string difficultLevel = Console.ReadLine();
-                        int difficultLevelInt = int.Parse(difficultLevel);
+
+
                         int combinedSkillLevel = 0;
                         foreach (Dictionary<string, string> member in listOfTeamMembers)
                         {
                             string skillLevel = member["skill level"];
                             int skillLevelInt = int.Parse(skillLevel);
                             combinedSkillLevel += skillLevelInt;
+
                         }
+
                         Random rand = new Random();
                         int luckValue = rand.Next(-10, 11);
                         int diffPlusLuck = difficultLevelInt + luckValue;
+
                         Console.WriteLine($"Your teams combined skill level is {combinedSkillLevel}");
-                        Console.WriteLine($"The Bank's difficulty level is {difficultLevelInt}");
-                        Console.WriteLine("Each time you try, there is some Luck that can affect the Bank's Difficulty Level that you can't see");
+                        Console.WriteLine($"The Bank's difficulty level is {diffPlusLuck}");
+
+
                         if (combinedSkillLevel >= diffPlusLuck)
                         {
+
+                            totalSuccess++;
+
+
+
                             Console.WriteLine("You could pull off this heist!");
+
                         }
                         else
                         {
+                            totalFailure++;
                             Console.WriteLine("Not a chance. Recruit some more and try again.");
                         }
+
+
                     }
+                    Console.WriteLine($"You succeeded {totalSuccess} times and failed {totalFailure} times");
 
 
 
