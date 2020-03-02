@@ -1,0 +1,10 @@
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/obj/Debug/netcoreapp3.1/hiest.csprojAssemblyReference.cache
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/obj/Debug/netcoreapp3.1/hiest.AssemblyInfoInputs.cache
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/obj/Debug/netcoreapp3.1/hiest.AssemblyInfo.cs
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/bin/Debug/netcoreapp3.1/hiest.deps.json
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/bin/Debug/netcoreapp3.1/hiest.runtimeconfig.json
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/bin/Debug/netcoreapp3.1/hiest.runtimeconfig.dev.json
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/bin/Debug/netcoreapp3.1/hiest.dll
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/bin/Debug/netcoreapp3.1/hiest.pdb
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/obj/Debug/netcoreapp3.1/hiest.dll
+/Users/rebeccapatek/workspace/csharp/exercises/hiest/obj/Debug/netcoreapp3.1/hiest.pdb
